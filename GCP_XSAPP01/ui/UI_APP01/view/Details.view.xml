@@ -1,0 +1,17 @@
+<core:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:f="sap.ui.layout.form"
+		controllerName="com.amol.northwind.view.Details" xmlns:html="http://www.w3.org/1999/xhtml">
+	<Page
+		id="idPage"
+		showNavButton="true"
+		navButtonPress="onNavBack"
+		title="Customer Order" >
+		<!-- <content>
+			<core:Fragment fragmentName="com.amol.northwind.view.QuickView" type="XML" />
+			<core:Fragment fragmentName="com.amol.northwind.view.CustomerOrders" type="XML" />
+			
+		</content> -->
+		<html:div id="idFrame" data-sap-ui-area="content" style="height: 100%;">
+		
+		</html:div>
+	</Page>
+</core:View>

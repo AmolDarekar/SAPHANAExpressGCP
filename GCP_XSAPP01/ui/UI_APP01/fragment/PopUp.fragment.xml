@@ -1,0 +1,82 @@
+<core:FragmentDefinition xmlns="sap.m"
+	xmlns:f="sap.ui.layout.form" xmlns:core="sap.ui.core">
+
+	<Dialog>
+		<content>
+			<VBox>
+				<HBox>
+					<RadioButton text="{i18n>amo.radiobutton.allinv}"
+						select="onSelectAll" selected="true" />
+					<RadioButton text="{i18n>amo.radiobutton.dueinv}"
+						select="onSelectOpen" />
+					<RadioButton text="{i18n>amo.radiobuttonoverdue}"
+						select="onSelectWon" />
+				</HBox>
+				<Table  items="{iSumModel>/items}">
+					<columns>
+						<Column minScreenWidth="Tablet" demandPopin="true" hAlign="Left">
+							<Label design="Bold" text="{i18n>am.column.invoice}" />
+						</Column>
+						<Column minScreenWidth="Tablet" demandPopin="true" hAlign="Left">
+							<Label design="Bold" text="{i18n>am.column.date}" />
+						</Column>
+						<Column minScreenWidth="Tablet" demandPopin="true" hAlign="Left">
+							<Label design="Bold" text="{i18n>am.column.paytarget}" />
+						</Column>
+						<Column minScreenWidth="Tablet" demandPopin="true" hAlign="Left">
+							<Label design="Bold" text="{i18n>am.column.ststus}" />
+						</Column>
+						<Column minScreenWidth="Tablet" demandPopin="true" hAlign="Left">
+							<Label design="Bold" text="{i18n>am.column.Volume}" />
+						</Column>
+					</columns>
+					<items>
+						<ColumnListItem>
+							<cells>
+								<Text text="{iSumModel>col1}" />
+								<Text text="{iSumModel>col2}" />
+								<Text text="{iSumModel>col3}" />
+								<Text text="{iSumModel>col4}" />
+								<Text text="{iSumModel>col5}" />
+							</cells>
+						</ColumnListItem>
+					</items>
+				</Table>
+				<Table id="idTableAMDetails"  items="{iModel>/items}">
+					<columns>
+						<Column minScreenWidth="Tablet" demandPopin="true" hAlign="Left">
+							
+						</Column>
+						<Column minScreenWidth="Tablet" demandPopin="true" hAlign="Left">
+							
+						</Column>
+						<Column minScreenWidth="Tablet" demandPopin="true" hAlign="Left">
+							
+						</Column>
+						<Column minScreenWidth="Tablet" demandPopin="true" hAlign="Left">
+							
+						</Column>
+						<Column minScreenWidth="Tablet" demandPopin="true" hAlign="Left">
+							
+						</Column>
+					</columns>
+					<items>
+						<ColumnListItem>
+							<cells>
+								<Text text="{iModel>col1}" />
+								<Text text="{iModel>col2}" />
+								<Text text="{iModel>col3}" />
+								<Text text="{iModel>col4}" />
+								<Text text="{iModel>col5}" />
+							</cells>
+						</ColumnListItem>
+					</items>
+				</Table>
+			</VBox>
+		</content>
+		<beginButton>
+			<Button text="OK" press="onItemDialogClose" />
+		</beginButton>
+	</Dialog>
+
+</core:FragmentDefinition>

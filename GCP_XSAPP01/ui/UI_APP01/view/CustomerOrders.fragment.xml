@@ -1,0 +1,62 @@
+<core:FragmentDefinition xmlns="sap.m"
+	xmlns:core="sap.ui.core">
+	<Panel>
+		<Table id="idOrderTable" inset="false" items="{/results}">
+			<headerToolbar>
+				<Toolbar>
+					<Title text="Orders" level="H2" />
+				</Toolbar>
+			</headerToolbar>
+			<columns>
+				<Column minScreenWidth="Tablet" demandPopin="true" hAlign="Center">
+					<Text text="Order ID" />
+				</Column>
+				<Column minScreenWidth="Tablet" demandPopin="true" hAlign="Center">
+					<Text text="Order Date" />
+				</Column>
+				<Column minScreenWidth="Tablet" demandPopin="true" hAlign="Center">
+					<Text text="Required Date" />
+				</Column>
+				<Column minScreenWidth="Tablet" demandPopin="true" hAlign="Center">
+					<Text text="Shipped Date" />
+				</Column>
+				<Column minScreenWidth="Tablet" demandPopin="true" hAlign="Center">
+					<Text text="Ship Via" />
+				</Column>
+				<Column minScreenWidth="Tablet" demandPopin="true" hAlign="Center">
+					<Text text="Freight" />
+				</Column>
+				<Column minScreenWidth="Tablet" demandPopin="true" hAlign="Center">
+					<Text text="Ship Name" />
+				</Column>
+				<Column minScreenWidth="Tablet" demandPopin="true" hAlign="Center">
+					<Text text="Ship City" />
+				</Column>
+				<Column minScreenWidth="Tablet" demandPopin="true" hAlign="Center">
+					<Text text="Ship Region" />
+				</Column>			
+				<Column minScreenWidth="Tablet" demandPopin="true" hAlign="Center">
+					<Text text="Ship Country" />
+				</Column>
+			</columns>
+			<items>
+				<ColumnListItem>
+					<cells>
+						<Text text="{OrderID}" />
+						<Text text="{path:'OrderDate',formatter:'com.amol.northwind.util.Formatter.date'}" />
+						<Text text="{path:'RequiredDate',formatter:'com.amol.northwind.util.Formatter.date'}" />
+						<Text text="{path:'ShippedDate',formatter:'com.amol.northwind.util.Formatter.date'}" />
+						<Text text="{ShipVia}" />
+						<Text text="{Freight}" />
+						<Text text="{ShipName}" />
+						<Text text="{ShipAddress}" />
+						<Text text="{ShipCity}" />
+						<Text text="{ShipRegion}" />
+						
+						<Text text="{ShipCountry}" />
+					</cells>
+				</ColumnListItem>
+			</items>
+		</Table>
+	</Panel>
+</core:FragmentDefinition>

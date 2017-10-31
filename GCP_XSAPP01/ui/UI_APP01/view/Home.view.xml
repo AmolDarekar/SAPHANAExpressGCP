@@ -1,0 +1,116 @@
+<core:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc"
+	xmlns:f="sap.ui.layout.form" xmlns:l="sap.ui.layout" xmlns="sap.m"
+	xmlns:html="http://www.w3.org/1999/xhtml"
+	controllerName="siemens.KAIROS.ui.salesfunnel.WebContent.src.controller.Home">
+	<Page showHeader="true" showNavButton="true" navButtonPress="onHomePress" class="pageBack"
+		title="{i18n>am.pagetitle}">
+		<content>
+			<VBox class="sapUiSmallMargin">
+				<HBox>
+					<Label text="{i18n>am.label.companyname}"></Label>
+					<Text text=":"></Text>
+				</HBox>
+
+				<HBox>
+					<RadioButton id="rbAll" text="{i18n>am.radiobutton.div}"
+						select="onSelectAll" selected="true" />
+					<RadioButton id="rbOpen" text="{i18n>am.radiobutton.bu}"
+						select="onSelectOpen" />
+					<RadioButton id="rbWon" text="{i18n>am.radiobutton.gck}"
+						select="onSelectWon" />
+				</HBox>
+				<Table id="idTblOpportunity" items="{msModel>/items}">
+					<columns>
+						<Column minScreenWidth="Tablet" demandPopin="true" hAlign="Left">
+							<Text wrapping="true" class="colLabelbold" text="{i18n>am.column.org}" />
+						</Column>
+						<Column minScreenWidth="Tablet" demandPopin="true" hAlign="Right">
+							<Text wrapping="true" class="colLabelbold" text="{i18n>am.column.total}" />
+						</Column>
+						<Column minScreenWidth="Tablet" demandPopin="true" hAlign="Right">
+							<Text wrapping="true" class="colLabelbold" text="{i18n>am.column.nodue}" />
+						</Column>
+						<Column minScreenWidth="Tablet" demandPopin="true" hAlign="Right">
+							<Text wrapping="true" class="colLabelbold" text="{i18n>am.column.totaldue}" />
+						</Column>
+						<Column minScreenWidth="Tablet" demandPopin="true" hAlign="Right" styleClass="GreenBack">
+							<Text wrapping="true" class="colLabelbold" text="{i18n>am.column.lessthirty}" />
+						</Column>
+						<Column minScreenWidth="Tablet" demandPopin="true" hAlign="Right" styleClass="YellowBack">
+							<Text class="colLabelbold" text="{i18n>am.column.gtthirty}"
+								wrapping="true" />
+						</Column>
+						<Column minScreenWidth="Tablet" demandPopin="true" hAlign="Right" styleClass="lighredBack">
+							<Text class="colLabelbold" text="{i18n>am.column.gtsixty}"
+								wrapping="true" />
+						</Column>
+						<Column minScreenWidth="Tablet" demandPopin="true" hAlign="Right" styleClass="RedBack">
+							<Text class="colLabelbold" text="{i18n>am.column.gtninty}"
+								wrapping="true" />
+						</Column>
+
+					</columns>
+					<items>
+						<ColumnListItem >
+							<cells>
+								<Text text="{msModel>col1}"/>
+								<Text text="{msModel>col2}" />
+								<Text text="{msModel>col3}" />
+								<Text text="{msModel>col4}" />
+								<Text text="{msModel>col5}" />
+								<Text text="{msModel>col6}" />
+								<Text text="{msModel>col7}" />
+								<Text text="{parts:[{path:'msModel>col8'}], formatter: '.doNumberFor'}" />
+							</cells>
+						</ColumnListItem>
+					</items>
+				</Table>
+				
+				<Table items="{mModel>/items}">
+					<columns>
+						<Column minScreenWidth="Tablet" demandPopin="true" hAlign="Left">
+						
+						</Column>
+						<Column minScreenWidth="Tablet" demandPopin="true" hAlign="Right">
+						
+						</Column>
+						<Column minScreenWidth="Tablet" demandPopin="true" hAlign="Right">
+							
+						</Column>
+						<Column minScreenWidth="Tablet" demandPopin="true" hAlign="Right">
+							
+						</Column>
+						<Column minScreenWidth="Tablet" demandPopin="true" hAlign="Right" styleClass="GreenBack">
+							
+						</Column>
+						<Column minScreenWidth="Tablet" demandPopin="true" hAlign="Right" styleClass="YellowBack">
+							
+						</Column>
+						<Column minScreenWidth="Tablet" demandPopin="true" hAlign="Right" styleClass="lighredBack">
+							
+						</Column>
+						<Column minScreenWidth="Tablet" demandPopin="true" hAlign="Right" styleClass="RedBack">
+							
+						</Column>
+
+					</columns>
+					<items>
+						<ColumnListItem >
+							<cells>
+								<Link emphasized="true" text="{mModel>col1}" press="onDetaileView"/>
+								<Text text="{mModel>col2}" />
+								<Text text="{mModel>col3}" />
+								<Text text="{mModel>col4}" />
+								<Text text="{mModel>col5}" />
+								<Text text="{mModel>col6}" />
+								<Text text="{mModel>col7}" />
+								<Text text="{path:'mModel>col8',formatter:'kairos.zformatter.doFormatNumber'}" />
+							</cells>
+						</ColumnListItem>
+					</items>
+				</Table>
+			</VBox>
+
+		</content>
+	</Page>
+</core:View>

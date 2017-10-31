@@ -1,0 +1,17 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core">
+	<Panel id="quickViewCardContainer">
+			
+			<ObjectListItem
+				title="{zcustDetails>/CONTACTNAME}">
+				<attributes>
+				<ObjectAttribute text="{zcustDetails>/CONTACTTITLE}" />
+				<ObjectAttribute text="{zcustDetails>/COMPANYNAME}" />
+				<ObjectAttribute text="{zcustDetails>/ADDRESS}" />
+				<ObjectAttribute text="{zcustDetails>/CITY }-{zcustDetails>/POSTALCODE}" />
+				<ObjectAttribute text="{zcustDetails>/COUNTRY}" />
+				<ObjectAttribute text="{zcustDetails>/PHONE}" />
+				<ObjectAttribute text="{zcustDetails>/FAX}" />
+				</attributes>
+			</ObjectListItem>
+	</Panel>
+</core:FragmentDefinition>
