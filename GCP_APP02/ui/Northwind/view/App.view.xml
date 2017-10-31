@@ -1,0 +1,4 @@
+<mvc:View controllerName="com.amol.nothwind.controller.App" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc"
+	xmlns="sap.m" displayBlock="true">
+	<App id="app"/>
+</mvc:View>

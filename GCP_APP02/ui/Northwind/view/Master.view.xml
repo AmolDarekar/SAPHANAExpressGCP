@@ -1,0 +1,17 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="com.amol.nothwind.controller.Master"
+	xmlns:html="http://www.w3.org/1999/xhtml">
+	<Page title="Northwind Services">
+		<content>
+			<List headerText="Employess" items="{North>/Employees}" id="lstID"
+			growing="true">
+				<CustomListItem>
+					<HBox>
+						<VBox class="sapUiSmallMarginBegin sapUiSmallMarginTopBottom">
+							<Label text="{North>FirstName}"/>
+						</VBox>
+					</HBox>
+				</CustomListItem>
+			</List>
+		</content>
+	</Page>
+</mvc:View>
